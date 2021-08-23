@@ -66,18 +66,18 @@
 # print(dan)
 
 #----------------숙제------------------
-# 5) 구구단 함수 제작
-#     gugudan(2, 7)
-#     2단 ~ 7단까지 출력하는 함수
+#5) 구구단 함수 제작
+# gugudan(2, 7)
+# 2단 ~ 7단까지 출력하는 함수
 
-# def gugudan(start, end):
-#     for i in range(start, end + 1):
-#         print()
-#         for j in range(1, 10):
-#             print("{0} x {1} = {2}".format(i, j, i * j))
+def gugudan(start, end):
+    for i in range(start, end + 1):
+        print()
+        for j in range(1, 10):
+            print("{0} x {1} = {2}".format(i, j, i * j), end="\t")
 
-# gugudan(5, 8)
-
+gugudan(5, 8)
+print()
 
 # 6) 별찍기 함수 제작
 #   star(5) => 아래처럼 출력
@@ -87,11 +87,11 @@
 #   ****
 #   *****
 
-# def star(num):
-#     for i in range(1, num + 1):
-#         print('*' * i)
-#
-# star(5)
+def star(num):
+    for i in range(1, num + 1):
+        print('*' * i)
+
+star(5)
 
 # 7) 별찍기 함수 제작
 #   star(5) => 아래처럼 출력
@@ -101,11 +101,12 @@
 #   ***o
 #   ****o
 
-# def star(num):
-#     for i in range(0, num):
-#         print('*' * i + '0')
-#
-# star(5)
+def star(num):
+    for i in range(0, num):
+        print('*' * i + '0')
+
+star(5)
+star(9)
 
 #----------------숙제------------------
 
@@ -168,12 +169,15 @@
 import math
 
 def hmsTime(time):
-    hour = math.trunc(time / 3600)
-    minut = math.trunc((time % 3600) / 60)
+    #hour = math.trunc(time / 3600)
+    hour = time // 3600
+    #minut = math.trunc((time % 3600) / 60)
+    minut = time % 3600 // 60
+    #second = time // 60
     second = time % 60
-    print(f"hour   =>  {hour} \nminut  =>  {minut} \nsecond =>  {second}")
+    return hour, minut, second
 
-inputNum = input("초를 입력:")
-hmsTime(time = int(inputNum))
+hour, minut, second = hmsTime(3672)
+print(f"hour   =>  {hour} \nminut  =>  {minut} \nsecond =>  {second}")
 
 #----------------숙제------------------

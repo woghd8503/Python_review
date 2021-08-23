@@ -89,9 +89,21 @@
 #----------------숙제------------------
 # 10) 구구단 9단을 짝수만 출력
 # 9x2, 9X4, 9X6, 9X8
-for i in range(2, 10):
-    if i % 2 == 0:
-        print("{0} x {1} = {2}".format(9, i, 9 * i))
+# for i in range(2, 10):
+#     if i % 2 == 0:
+#         print("{0} x {1} = {2}".format(9, i, 9 * i))
+#
+# for i in range(2, 10):        # 2 ~ 9
+#     for j in range(2, 10, 2): # 1 ~ 9
+#         print("{0}x{1}={2}".format(i, j, i*j), end="\t");
+#     print()
+
+# for i in range(2, 10):          # 2 ~ 9
+#     for j in range(2, 10, 2):   # 1 ~ 9
+#         if j%2!=0:
+#             continue
+#         print("{0}x{1}={2}".format(i, j, i * j), end="\t");
+#   print()
 
 # 11) 구구단 천체를 출력하시오
 for i in range(2, 10):
