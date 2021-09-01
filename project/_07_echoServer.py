@@ -2,8 +2,8 @@
 from socket import *
 
 # 2) 접속 수신 소켓 생성
-# AF_INET = IPPROTO_IPV4
-# SOCK_STREAM : TCP, 신뢰성 있는 통신
+# AF_INET = IPV4(IP주소가 4byte), IPv6(ip주소가 16byte)
+# SOCK_STREAM : TCP(신뢰성 있는 통신), UDP(빠른 속도)
 serverSock = socket(AF_INET, SOCK_STREAM)
 
 # 3) 프로세스를 종료한 후 바로 재시작해도 주소할당될 수 있는 옵션
@@ -33,6 +33,7 @@ while True:
             if s == '':
                 connSock.close()
                 print('{0} 정상 접속 종료'.format(connAddr))
+                break
         except Exception as e:
             connSock.close()
             print('{0} 비정상 접속 종료'.format(connAddr))
