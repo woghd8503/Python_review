@@ -17,18 +17,18 @@
 
 from cal.shape import *
 
-# help(circle)
-# help(rectangle)
-# help(triangle)
-#
-# print(circle.fcirle(3.4))
-# print(rectangle.frectangle(3.5, 2.5))
-# print(triangle.ftriangle(2.5, 2))
+help(circle)
+help(rectangle)
+help(triangle)
 
-# from cal.human import *
-#
-# me = my.cmy("홍길동",24,1000000000000,"AR_VR","3대 1000Kg")
-# me.intro()
-# me.happy()
-# me.study()
-# me.health()
+print(circle.fcirle(3.4))
+print(rectangle.frectangle(3.5, 2.5))
+print(triangle.ftriangle(2.5, 2))
+
+from cal.human import *
+
+me = my.cmy("홍길동",24,1000000000000,"AR_VR","3대 1000Kg")
+me.intro()
+me.happy()
+me.study()
+me.health()
